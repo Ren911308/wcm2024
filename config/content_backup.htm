@@ -53,135 +53,180 @@
 <p>1.wink的使用方法</p>
 <p>2.使用git常用指令</p>
 <p>3.另用指令分組網站成員倉儲分組子模組</p>
-<p></p><h2>W6</h2>
+<h3>1.WINK</h3>
+<p><a href="https://www.debugmode.com/wink.html">https://www.debugmode.com/wink.html</a></p>
+<h3>2.GIT ORDER</h3>
+<p><span>git add .</span><span> </span>(新增)</p>
+<p><span>git commit -m "說明字串"</span>  (提交及名稱)</p>
+<p><span>git </span><span>push (推送)</span></p>
+<p><span>git version (查詢目前所使用的 git 版本)</span></p>
+<p><span>git status (一般是用來檢查目前近端改版情況)</span></p>
+<p>若在遠端倉儲已經改版了，就必須先<span>git pull，將遠端資訊與自己的合併更新，才能在提交新的版本推送至倉儲。</span></p>
+<p><span>git pull=git fetch + git merge</span></p>
+<p><span>git submodule add 倉儲網址子目錄</span></p>
+<p><span>git clone --recurse-submodules (.git 指定目錄與否)</span></p>
+<p><span>token</span></p>
+<p><span>git config --global</span></p>
+<p>------------------------</p>
+<p>以下為其他其他指令</p>
+<p><span>git submodule update --init (抓下子模組)</span></p>
+<p><span>git log (檢視 Git 紀錄 Q鍵離開)</span></p>
+<p><span>ls -l (瀏覽)</span></p>
+<p><span>pwd (列出現在工作目錄)</span></p>
+<p><span>acp ("輸入" 直接上傳)</span></p>
+<p><span>dns (將英文名稱轉為數字IP 問server(伺服器)IP地址 DNS會先查詢自己資料庫)</span></p>
+<p><span>dir (顯示某個磁碟指定目錄下的全部或部分檔案目錄和子目錄)</span></p>
+<p><span>./b(代表執行、運行)(執行可執行檔)</span></p>
+<h3>3.建立分組倉儲</h3>
+<p>利用Codespaces建立分組倉儲建立個人子模組</p>
+<p>另用終端機打出指令</p>
+<p><span>git status</span></p>
+<p><span>ls -l</span></p>
+<p><span>clear</span></p>
+<p><span>git submodule add 自己倉儲網址.git空格+學號</span></p>
+<p><span>git add .</span></p>
+<p><span>git commit -m "add 學號 submodule"</span></p>
+<p><span>git push</span></p>
+<p>就可以將自己的個人子模組加入到分組倉儲</p>
+<h2>W6</h2>
 <p>將下面題目解答並放入自己的網站上</p>
 <p>根據您的專業, 就 git 的使用, 從與 ChatGPT 的對話, 將內容整理到個人的第六網誌, 其中包含:</p>
 <p>1.git 的發展歷史</p>
 <p>2. 創作人的相關履歷</p>
 <p>3.以及一般相同專業人士如何利用  git 解決內容管理問題?</p>
 <p>4.<span><span class="ui-provider sy vy vz wa wb wc wd we wf wg wh wi wj wk wl wm wn wo wp wq wr ws wt wu wv ww wx wy wz xa xb xc xd xe xf" dir="ltr">假如要在 Windows 實際 demo git client 與 git server, 該如何進行? </span></span></p>
-<h3>1.git 的發展歷史</h3>
+<h3>git的發展歷史</h3>
 <ol>
-<li>
-<h4><strong>誕生背景：</strong> Git 是由 Linux 之父 Linus Torvalds 在 2005 年為了管理 Linux 內核開發而創建的。在那之前，Linux 內核團隊使用的是 BitKeeper，但由於許可議題，使得 Linux 社區需要一個新的版本控制系統。</h4>
-</li>
-<li>
-<h4><strong>誕生過程：</strong> Linus Torvalds開始尋找替代方案。他首先嘗試了 Monotone 和 Mercurial 等其他工具，但最終決定開發一個新的版本控制系統，這就是 Git。</h4>
-</li>
-<li>
-<h4><strong>首次發布：</strong> Git 的第一個版本於 2005 年 4 月釋出，並在Linux內核的開發中使用。從那時起，Git 迅速流行，成為許多開源項目和企業使用的首選版本控制系統之一。</h4>
-</li>
-<li>
-<h4><strong>社區發展：</strong> Git 很快吸引了一個活躍的社區，許多開發者貢獻了各種功能和改進。這些貢獻使得 Git 可以不斷演進和增強。</h4>
-</li>
-<li>
-<h4><strong>GitHub 的興起：</strong> 2008 年，GitHub 這個基於 Git 的代碼託管平台成立。GitHub 的出現進一步推動了 Git 的普及和發展，成為了全球最大的代碼託管平台之一。</h4>
-</li>
-<li>
-<h4><strong>持續發展：</strong> 自 Git 誕生以來，它持續得到更新和改進。Git 社區和核心開發團隊不斷推出新的版本，添加新功能，優化性能，並修復漏洞。</h4>
-</li>
-<li>
-<h4><strong>應用範圍擴大：</strong> Git 不僅僅用於代碼版本控制，還廣泛應用於文檔管理、配置管理和各種其他領域。</h4>
-</li>
+<li><strong>誕生背景：</strong> Git 是由 Linux 之父 Linus Torvalds 在 2005 年為了管理 Linux 內核開發而創建的。在那之前，Linux 內核團隊使用的是 BitKeeper，但由於許可議題，使得 Linux 社區需要一個新的版本控制系統。</li>
+<li><strong>誕生過程：</strong> Linus Torvalds開始尋找替代方案。他首先嘗試了 Monotone 和 Mercurial 等其他工具，但最終決定開發一個新的版本控制系統，這就是 Git。</li>
+<li><strong>首次發布：</strong> Git 的第一個版本於 2005 年 4 月釋出，並在Linux內核的開發中使用。從那時起，Git 迅速流行，成為許多開源項目和企業使用的首選版本控制系統之一。</li>
+<li><strong>社區發展：</strong> Git 很快吸引了一個活躍的社區，許多開發者貢獻了各種功能和改進。這些貢獻使得 Git 可以不斷演進和增強。</li>
+<li><strong>GitHub 的興起：</strong> 2008 年，GitHub 這個基於 Git 的代碼託管平台成立。GitHub 的出現進一步推動了 Git 的普及和發展，成為了全球最大的代碼託管平台之一。</li>
+<li><strong>持續發展：</strong> 自 Git 誕生以來，它持續得到更新和改進。Git 社區和核心開發團隊不斷推出新的版本，添加新功能，優化性能，並修復漏洞。</li>
+<li><strong>應用範圍擴大：</strong> Git 不僅僅用於代碼版本控制，還廣泛應用於文檔管理、配置管理和各種其他領域。</li>
 </ol>
-<h4>總的來說，Git 的發展歷史展示了一個由開源社區推動的成功故事，它為開發者提供了一個強大而靈活的工具，用於有效管理代碼和協作開發</h4>
-<h3>2.創作人的相關履歷</h3>
-<h4>Git 的創造者是 Linux 核心的創建者 Linus Torvalds。他是一位芬蘭籍的計算機科學家，於 1991 年創建了 Linux 作業系統，並在開源社區中享有極高的聲譽</h4>
-<h4>Linus Torvalds 出生於 1969 年 12 月 28 日，畢業於赫爾辛基大學，主修電腦科學。他在創建 Linux 核心的同時，也是 Git 版本控制系統的創建者和主要開發者</h4>
-<h4>在他的職業生涯中，Torvalds 曾就職於 Transmeta Corporation 和 Open Source Development Labs。他的工作和貢獻使他成為了開源社區的一個重要人物，並且獲得了多項獎項和榮譽</h4>
-<h4>Torvalds 以其開放、直率和自由的風格而聞名，他在維護 Linux 核心和 Git 項目的過程中始終堅持這一風格。他通過他的工作，為開源軟體的發展和普及做出了重大貢獻</h4>
-<h3>3.一般相同專業人士如何利用  git 解決內容管理問題?</h3>
-<h4>1.版本控制</h4>
-<h4>git 可以追蹤文件的變更歷史，可讓專業人士可以輕鬆地管理文件的不同版本，對於軟體開發者來說尤其重要，他們可以隨時回溯到過去的版本，比較不同版本之間的差異，甚至回滾到較早的版本。對於文檔編輯和內容創作也非常有用，可以追蹤編輯歷史並輕鬆地合併不同版本的變更。</h4>
-<h4>2.協作開發</h4>
-<h4>git 支持多人同時協作開發，多個開發者可以在不同的分支上進行工作，並通過合併操作將自己的工作合併到主分支中。這使得團隊成員可以同時進行工作，而不會互相干擾，從而提高了開發效率。</h4>
-<h4>3.分支管理</h4>
-<h4>git 的分支功能非常強大，可以讓專業人士輕鬆地創建、切換和合併分支。這使得專業人士可以方便地在不影響主要開發流程的情況下進行實驗、修復錯誤或者開發新的功能。</h4>
-<h4>4.代碼審查</h4>
-<h4>git 支持代碼審查功能，開發者可以通過發送合併請求（Pull Request）的方式將自己的代碼提交給其他成員進行審查。這有助於提高代碼質量、發現潛在的問題和增進團隊之間的溝通。</h4>
-<h4>5.文檔管理</h4>
-<h4>git 可以作為一個強大的工具。專業人士可以使用 git 來追蹤文檔的修改歷史，並通過分支和合併操作來管理不同版本的文檔。這使得團隊成員可以輕鬆地協作編輯文檔，同時保持文檔的統一性和準確性。</h4>
-<h3>4.假如要在 Windows 實際 demo git client 與 git server, 該如何進行?</h3>
-<p><strong>選擇Git服務器：</strong> 可以選 GitLab、GitHub 。</p>
-<p><strong>安裝 Git 伺服器軟體：</strong><span> </span>根據您選擇的 Git 伺服器軟體，按照其官方文件或指南進行安裝。這些軟體通常提供 Windows 版本的安裝程式，您可以下載並按照步驟進行安裝。</p>
-<p><strong>配置 Git 伺服器：</strong><span> </span>安裝完成後，根據您的需求配置 Git 伺服器。</p>
-<p><strong>啟動 Git 伺服器服務：</strong><span> </span>安裝完成後，啟動 Git 伺服器服務，確保其能夠正常運行。</p>
-<p><strong>安裝 Git 客戶端：</strong><span> </span>在 Windows 上安裝 Git 客戶端。您可以從 Git 官方網站下載 Git for Windows </p>
-<p><strong>配置 Git 客戶端：</strong><span> </span>安裝完成後，在命令行或圖形用戶界面中配置 Git 客戶端的使用者信息，包括使用者名稱和郵箱地址，以便提交程式碼時記錄作者信息。</p>
-<ol>
-<li>
-<div class="flex-1 overflow-hidden">
-<div class="react-scroll-to-bottom--css-enhmt-79elbk h-full">
-<div class="react-scroll-to-bottom--css-enhmt-1n7m0yu">
-<div class="flex flex-col text-sm pb-9">
-<div class="w-full text-token-text-primary" data-testid="conversation-turn-15">
-<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
-<div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
-<div class="relative flex w-full flex-col agent-turn">
-<div class="flex-col gap-1 md:gap-3">
-<div class="flex flex-grow flex-col max-w-full">
-<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="4e271a99-f50f-4da7-96eb-9a3994631cda">
-<div class="markdown prose w-full break-words dark:prose-invert light">
-<ol>
-<li><strong>Git clone 倉庫：</strong><span> </span>使用 Git 客戶端從 Git 伺服器上clone倉庫到本地電腦。您可以使用命令行或圖形用戶界面執行clone操作。例如，在命令行中執行<span> </span><code>git clone &lt;Git伺服器地址&gt;</code><span> </span>即可將倉庫克隆到本地。</li>
-</ol>
-<strong>演示 Git 操作：</strong>
-<ol>
-<li><strong>添加檔案和提交變更：</strong><span> </span>在本地克隆的倉庫中添加檔案、修改檔案，並使用 Git 客戶端提交這些變更到本地倉庫。</li>
-<li><strong>推送變更到 Git 伺服器：</strong><span> </span>使用 Git 客戶端將本地倉庫中的變更推送到 Git 伺服器。您可以使用命令行或圖形用戶界面執行推送操作。</li>
-<li><strong>拉取最新變更：</strong><span> </span>使用 Git 客戶端從 Git 伺服器中拉取最新的變更到本地倉庫，以確保本地倉庫與伺服器保持同步。</li>
-</ol>
+<p>總的來說，Git 的發展歷史展示了一個由開源社區推動的成功故事，它為開發者提供了一個強大而靈活的工具，用於有效管理代碼和協作開發</p>
+<h3>創作人的相關履歷</h3>
+<p>Git 的創造者是 Linux 核心的創建者 Linus Torvalds。他是一位芬蘭籍的計算機科學家，於 1991 年創建了 Linux 作業系統，並在開源社區中享有極高的聲譽</p>
+<p>Linus Torvalds 出生於 1969 年 12 月 28 日，畢業於赫爾辛基大學，主修電腦科學。他在創建 Linux 核心的同時，也是 Git 版本控制系統的創建者和主要開發者</p>
+<p>在他的職業生涯中，Torvalds 曾就職於 Transmeta Corporation 和 Open Source Development Labs。他的工作和貢獻使他成為了開源社區的一個重要人物，並且獲得了多項獎項和榮譽</p>
+<p>Torvalds 以其開放、直率和自由的風格而聞名，他在維護 Linux 核心和 Git 項目的過程中始終堅持這一風格。他通過他的工作，為開源軟體的發展和普及做出了重大貢獻</p>
+<h3>git常用指令</h3>
+<div class="line number1 index0 alt2">
+<div>
+<div class="syntaxhighlighter cpp" id="highlighter_759307">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="cpp plain">git add. </code></div>
+<div class="line number2 index1 alt1"><code class="cpp comments">// 將所有修改的文件新增至暫存區//</code></div>
+<div class="line number3 index2 alt2"><code class="cpp plain">git commit -m </code><code class="cpp string">"訊息字串"</code></div>
+<div class="line number4 index3 alt1"><code class="cpp comments">//提交暫存區的文件至本地儲存庫，並附上提交訊息//</code></div>
+<div class="line number5 index4 alt2"><code class="cpp plain">git push</code></div>
+<div class="line number6 index5 alt1"><code class="cpp spaces"> </code><code class="cpp comments">//推送本地儲存庫的提交至遠端儲存庫//</code></div>
+<div class="line number7 index6 alt2"><code class="cpp plain">git pull </code></div>
+<div class="line number8 index7 alt1"><code class="cpp comments">//拉取遠端儲存庫的更新//</code></div>
+<div class="line number9 index8 alt2"><code class="cpp plain">git version</code></div>
+<div class="line number10 index9 alt1"><code class="cpp spaces"> </code><code class="cpp comments">//查看當前git的版本//</code></div>
+<div class="line number11 index10 alt2"><code class="cpp plain">git status</code></div>
+<div class="line number12 index11 alt1"><code class="cpp spaces"> </code><code class="cpp comments">//查看工作區和暫存區的狀態//</code></div>
+<div class="line number13 index12 alt2"><code class="cpp plain">git </code><code class="cpp functions bold">log</code></div>
+<div class="line number14 index13 alt1"><code class="cpp comments">//查看歷史提交紀錄//</code></div>
+<div class="line number15 index14 alt2"><code class="cpp plain">git clone [URL] [本地目錄]</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
+<div class="line number1 index0 alt2"></div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</li>
-</ol>
-<div class="flex-1 overflow-hidden">
-<div class="react-scroll-to-bottom--css-zdfog-79elbk h-full">
-<div class="react-scroll-to-bottom--css-zdfog-1n7m0yu">
-<div class="flex flex-col text-sm pb-9">
-<div class="w-full text-token-text-primary" data-testid="conversation-turn-15" dir="auto">
-<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
-<div class="flex flex-1 text-base mx-auto gap-3 juice:gap-4 juice:md:gap-6 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
-<div class="relative flex w-full flex-col agent-turn">
-<div class="flex-col gap-1 md:gap-3">
-<div class="flex flex-grow flex-col max-w-full">
-<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="ad87de98-2a47-4bc8-bf19-b0972239354c" dir="auto">
-<div class="markdown prose w-full break-words dark:prose-invert light">
+<h3>利用git 解決內容管理問題?</h3>
+<p>對於相同專業的人士，如軟體開發人員、資料科學家或者內容創作者等，Git 是一個非常強大的工具，可以幫助他們有效地解決內容管理問題。以下是一般相同專業人士如何利用 Git 解決內容管理問題的一些方式：</p>
+<p>1. 版本控制：Git 可以跟蹤文件的所有更改，包括新增、修改和刪除，並為每次更改創建一個獨特的版本號。這使得團隊成員可以隨時回溯到先前的版本，追蹤更改歷史，並在需要時回滾到特定版本。</p>
+<p>2. 協作：Git 可以輕鬆實現多人協作，多人可以同時編輯文件而不會發生衝突。通過分支（branch）功能，每個人都可以在自己的分支上進行工作，完成後再合併到主分支或其他分支中。</p>
+<p>3. 代碼審查：Git 通過提供 Pull Request（PR）功能，使得代碼審查變得更加方便和有效。團隊成員可以通過發送 PR 來邀請其他人檢查他們的代碼更改，並進行討論、提出建議或者進行修改。</p>
+<p>4. 追蹤問題和解決方案：Git 可以與問題追蹤系統（如GitHub 的 Issue 或 GitLab 的問題追蹤）集成，使得團隊能夠更好地追蹤問題、錯誤和待解決的任務。通過在提交信息中引用問題號，可以輕鬆地將代碼更改與相應的問題關聯起來。</p>
+<p>5. 自動化流程：Git 可以與自動化工具（如持續集成/持續部署工具）集成，實現自動化測試、構建和部署流程。這樣可以提高開發效率，減少手動操作帶來的錯誤。</p>
+<p>總的來說，Git 提供了一個強大的框架，使得相同專業的人士可以更好地協作、管理內容，並有效地解決問題。通過學習和掌握 Git 的基本原理和操作技巧，可以使得團隊更加高效地進行工作。</p>
+<p><span><span class="ui-provider qx sw sx sy sz ta tb tc td te tf tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz ua ub uc ud" dir="ltr"></span></span></p>
 <p></p>
+<h3>在 Windows 實際 demo git client 與 git server, 該如何進行?</h3>
+<p>當你想要進行 Git 客戶端和伺服器的實際演示時，你需要有一個 Git 伺服器和至少一個 Git 客戶端。通常情況下，你可以在本地或者使用雲服務提供商來設置 Git 伺服器。</p>
+<p>以下是一個簡單的步驟來進行實際的 Git 客戶端和伺服器演示：</p>
+<p><span>設置Git伺服器:</span></p>
+<p>     <span> </span><strong>1.選擇伺服器:</strong><span> </span>你可以選擇在本地搭建 Git 伺服器，或者使用雲服務提供商（如 GitHub、GitLab、Bitbucket 等）。</p>
+<p><strong>       2.安裝 Git:</strong><span> </span>在伺服器上安裝 Git，如果你使用的是雲服務提供商，則不需要手動安裝 Git。</p>
+<p><strong>        3.建立倉庫:</strong><span> </span>在伺服器上創建一個空的 Git 倉庫，你可以使用<span> </span><code>git init --bare</code><span> </span>命令來創建一個裸倉庫，或 者在雲服務提供商上通過介面創建倉庫。</p>
+<p><span>設置Git客戶端</span>:</p>
+<p>       <strong>1.安裝 Git:</strong><span> </span>在你的本地機器上安裝 Git 客戶端。</p>
+<p><strong>       2.配置用戶信息:</strong><span> </span>在客戶端上設置 Git 用戶名和郵箱，你可以使用以下命令: </p>
+<div>
+<div class="syntaxhighlighter cpp" id="highlighter_463067">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="cpp plain">git config --global user.name </code><code class="cpp string">"Your Name"</code></div>
+<div class="line number2 index1 alt1"><code class="cpp plain">git config --global user.email </code><code class="cpp string">"your.email@example.com"</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
+<p><strong>       3.克隆倉庫</strong>: 使用 <code>git clone</code> 命令將伺服器上的倉庫克隆到本地。例如：</p>
+<div>
+<div class="syntaxhighlighter cpp" id="highlighter_160350">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="cpp plain">git clone username@server:/path/to/repository</code></div>
 </div>
-<div class="mt-1 flex gap-3 empty:hidden">
-<div class="text-gray-400 flex self-end lg:self-center items-center justify-center lg:justify-start mt-0 -ml-1 h-7 gap-[2px] visible">
-<div class="flex"><span class="" data-state="closed"><button class="p-1 rounded-md text-token-text-tertiary hover:text-token-text-primary md:invisible md:group-hover:visible md:group-[.final-completion]:visible"><svg class="icon-md" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M11.8727 21.4961C11.6725 21.8466 11.2811 22.0423 10.8805 21.9922L10.4267 21.9355C7.95958 21.6271 6.36855 19.1665 7.09975 16.7901L7.65054 15H6.93226C4.29476 15 2.37923 12.4921 3.0732 9.94753L4.43684 4.94753C4.91145 3.20728 6.49209 2 8.29589 2H18.0045C19.6614 2 21.0045 3.34315 21.0045 5V12C21.0045 13.6569 19.6614 15 18.0045 15H16.0045C15.745 15 15.5054 15.1391 15.3766 15.3644L11.8727 21.4961ZM14.0045 4H8.29589C7.39399 4 6.60367 4.60364 6.36637 5.47376L5.00273 10.4738C4.65574 11.746 5.61351 13 6.93226 13H9.00451C9.32185 13 9.62036 13.1506 9.8089 13.4059C9.99743 13.6612 10.0536 13.9908 9.96028 14.2941L9.01131 17.3782C8.6661 18.5002 9.35608 19.6596 10.4726 19.9153L13.6401 14.3721C13.9523 13.8258 14.4376 13.4141 15.0045 13.1902V5C15.0045 4.44772 14.5568 4 14.0045 4ZM17.0045 13V5C17.0045 4.64937 16.9444 4.31278 16.8338 4H18.0045C18.5568 4 19.0045 4.44772 19.0045 5V12C19.0045 12.5523 18.5568 13 18.0045 13H17.0045Z" fill="currentColor" fill-rule="evenodd"></path></svg></button></span></div>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div class="pr-2 lg:pr-0"></div>
-</div>
-<div class="absolute">
-<div class="flex w-full gap-2 items-center justify-center"><svg class="icon-md" fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 13.25C7.98703 13.25 8.45082 13.1505 8.87217 12.9708C8.46129 14.0478 7.62459 15.5792 6.35846 15.76C5.81173 15.8382 5.43183 16.3447 5.50993 16.8914C5.58804 17.4382 6.09457 17.8181 6.6413 17.7399C9.19413 17.3753 10.7256 14.4711 11.169 12.1909C11.4118 10.942 11.3856 9.58095 10.8491 8.44726C10.2424 7.16517 8.92256 6.24402 7.48508 6.25001C5.55895 6.25805 4 7.82196 4 9.74998C4 11.683 5.567 13.25 7.5 13.25Z" fill="currentColor"></path><path d="M16.1799 13.25C16.667 13.25 17.1307 13.1505 17.5521 12.9708C17.1412 14.0478 16.3045 15.5792 15.0384 15.76C14.4917 15.8382 14.1118 16.3447 14.1899 16.8914C14.268 17.4382 14.7745 17.8181 15.3212 17.7399C17.8741 17.3753 19.4056 14.4711 19.8489 12.1909C20.0918 10.942 20.0655 9.58095 19.529 8.44726C18.9223 7.16517 17.6025 6.24402 16.165 6.25001C14.2389 6.25805 12.6799 7.82196 12.6799 9.74998C12.6799 11.683 14.2469 13.25 16.1799 13.25Z" fill="currentColor"></path></svg></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<button class="cursor-pointer absolute z-10 rounded-full bg-clip-padding border text-token-text-secondary border-token-border-light right-1/2 bg-token-main-surface-primary bottom-5"><svg class="m-1 text-token-text-primary" fill="none" height="24" viewbox="0 0 24 24" width="24"><path d="M17 13L12 18L7 13M12 6L12 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button></div>
-</div>
-</div>
-</div>
+<p><span>進行演示:</span></p>
+<p><strong>        1.進行修改</strong>: 在本地客戶端對項目進行一些修改，比如創建、編輯或刪除文件。</p>
+<p><strong>        2.提交更改:</strong><span> </span>使用<span> </span><code>git add</code><span> </span>將修改添加到暫存區，然後使用<span> </span><code>git commit</code><span> </span>提交更改到本地倉庫。</p>
+<p><strong>        3.推送到伺服器:</strong><span> </span>使用<span> </span><code>git push</code><span> </span>命令將本地的提交推送到伺服器上。</p>
+<p><strong>        4.拉取更新:</strong><span> </span>如果其他人在伺服器上進行了修改，你可以使用<span> </span><code>git pull</code><span> </span>命令將更新拉取到本地。</p>
 <div class="w-full pt-2 md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:w-[calc(100%-.5rem)]"><form class="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
 <div class="relative flex h-full flex-1 flex-col">
-<div class="absolute bottom-full left-0 right-0"></div>
 <div class="flex w-full items-center"></div>
 </div>
 </form></div>
