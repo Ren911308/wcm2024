@@ -146,43 +146,218 @@ img.add_border {
 <p>1.選擇自己想要製作的主題，我選擇的是2048小遊戲，並<span>下載可攜程式環境: </span><a href="http://229.cycu.org/portable_2024.7z">portable_2024.7z</a><span> (需要密碼, 下載 540MB, 解開壓縮後約 1.8GB)</span></p>
 <p>2.使用CHATGPT並詢問<span style="color: #000000; background-color: #00ffff;">幫我用python 做出2048的小遊戲 並用網頁方式呈現</span><span style="color: #000000;">，會出現前端展示（HTML, CSS, JavaScript）並顯示出<span>HTML, CSS, JavaScript各自的程式</span></span></p>
 <p><strong>HTML</strong>：</p>
-<p><span style="color: #000000;"><span>&lt;!DOCTYPE html&gt;<br/>&lt;html lang="en"&gt;<br/>&lt;head&gt;<br/> &lt;meta charset="UTF-8"&gt;<br/> &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br/> &lt;title&gt;2048 Game&lt;/title&gt;<br/> &lt;link rel="stylesheet" href="styles.css"&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/> &lt;div class="container"&gt;<br/> &lt;div class="board" id="board"&gt;&lt;/div&gt;<br/> &lt;/div&gt;<br/> &lt;script src="script.js"&gt;&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/></span></span></p>
-<p><span style="color: #000000;"><span><img alt="" height="440" src="./../images/螢幕擷取畫面 2024-06-05 231125.png" width="800"/></span></span></p>
-<h5><strong>CSS (styles.css)</strong>：</h5>
-<p>body {<br/> display: flex;<br/> justify-content: center;<br/> align-items: center;<br/> height: 100vh;<br/> background-color: #faf8ef;<br/>}</p>
-<p>.container {<br/> display: flex;<br/> justify-content: center;<br/> align-items: center;<br/>}</p>
-<p>.board {<br/> display: grid;<br/> grid-template-columns: repeat(4, 100px);<br/> grid-template-rows: repeat(4, 100px);<br/> gap: 10px;<br/> background-color: #bbada0;<br/> padding: 10px;<br/> border-radius: 10px;<br/>}</p>
-<p>.tile {<br/> width: 100px;<br/> height: 100px;<br/> background-color: #cdc1b4;<br/> display: flex;<br/> justify-content: center;<br/> align-items: center;<br/> font-size: 24px;<br/> font-weight: bold;<br/> color: #776e65;<br/> border-radius: 5px;<br/>}</p>
-<p><img alt="" height="456" src="./../images/螢幕擷取畫面 2024-06-05 231158.png" width="800"/></p>
-<p><strong><img alt="" height="503" src="./../images/螢幕擷取畫面 2024-06-05 231213.png" width="800"/></strong></p>
-<p><strong><img alt="" height="488" src="./../images/螢幕擷取畫面 2024-06-05 231229.png" width="800"/></strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;2048 Game&lt;/title&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="container"&gt;
+&lt;div class="board" id="board"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p></p>
+<p><img alt="" height="220" src="./../images/螢幕擷取畫面 2024-06-05 231125.png" width="400"/></p>
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span></span></div>
+<h4><strong>CSS (styles.css)</strong>：</h4>
+<pre class="brush:css;auto-links:false;toolbar:false" contenteditable="false">body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #faf8ef;
+}
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.board {
+display: grid;
+grid-template-columns: repeat(4, 100px);
+grid-template-rows: repeat(4, 100px);
+gap: 10px;
+background-color: #bbada0;
+padding: 10px;
+border-radius: 10px;
+}
+
+.tile {
+width: 100px;
+height: 100px;
+background-color: #cdc1b4;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 24px;
+font-weight: bold;
+color: #776e65;
+border-radius: 5px;
+}</pre>
+<p></p>
+<p></p>
+<p><img alt="" height="228" src="./../images/螢幕擷取畫面 2024-06-05 231158.png" width="400"/></p>
+<p><img alt="" height="252" src="./../images/螢幕擷取畫面 2024-06-05 231213.png" width="400"/></p>
+<p><img alt="" height="244" src="./../images/螢幕擷取畫面 2024-06-05 231229.png" width="400"/></p>
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span></span></div>
 <p><strong>JavaScript (script.js)</strong>：</p>
-<p>document.addEventListener('DOMContentLoaded', () =&gt; {<br/> const boardElement = document.getElementById('board');</p>
-<p>const game = new Game2048();<br/> renderBoard(game.getBoard());</p>
-<p>document.addEventListener('keydown', (event) =&gt; {<br/> switch (event.key) {<br/> case 'ArrowUp':<br/> game.move_up();<br/> break;<br/> case 'ArrowDown':<br/> game.move_down();<br/> break;<br/> case 'ArrowLeft':<br/> game.move_left();<br/> break;<br/> case 'ArrowRight':<br/> game.move_right();<br/> break;<br/> }<br/> renderBoard(game.getBoard());<br/> if (game.is_game_over()) {<br/> alert('Game Over!');<br/> }<br/> });</p>
-<p>function renderBoard(board) {<br/> boardElement.innerHTML = '';<br/> for (let row of board) {<br/> for (let cell of row) {<br/> const tile = document.createElement('div');<br/> tile.className = 'tile';<br/> tile.textContent = cell === 0 ? '' : cell;<br/> boardElement.appendChild(tile);<br/> }<br/> }<br/> }<br/>});</p>
-<p>class Game2048 {<br/> constructor() {<br/> this.board = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));<br/> this.addNewTile();<br/> this.addNewTile();<br/> }</p>
-<p>addNewTile() {<br/> const emptyCells = [];<br/> for (let i = 0; i &lt; 4; i++) {<br/> for (let j = 0; j &lt; 4; j++) {<br/> if (this.board[i][j] === 0) {<br/> emptyCells.push([i, j]);<br/> }<br/> }<br/> }<br/> if (emptyCells.length &gt; 0) {<br/> const [x, y] = emptyCells[Math.floor(Math.random() * emptyCells.length)];<br/> this.board[x][y] = Math.random() &lt; 0.9 ? 2 : 4;<br/> }<br/> }</p>
-<p>compress(row) {<br/> const newRow = row.filter(val =&gt; val !== 0);<br/> while (newRow.length &lt; 4) newRow.push(0);<br/> return newRow;<br/> }</p>
-<p>merge(row) {<br/> for (let i = 0; i &lt; 3; i++) {<br/> if (row[i] === row[i + 1] &amp;&amp; row[i] !== 0) {<br/> row[i] *= 2;<br/> row[i + 1] = 0;<br/> }<br/> }<br/> return row;<br/> }</p>
-<p>move_left() {<br/> let newBoard = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));<br/> for (let i = 0; i &lt; 4; i++) {<br/> let newRow = this.compress(this.board[i]);<br/> newRow = this.merge(newRow);<br/> newRow = this.compress(newRow);<br/> newBoard[i] = newRow;<br/> }<br/> this.board = newBoard;<br/> this.addNewTile();<br/> }</p>
-<p>move_right() {<br/> this.board = this.board.map(row =&gt; row.reverse());<br/> this.move_left();<br/> this.board = this.board.map(row =&gt; row.reverse());<br/> }</p>
-<p>move_up() {<br/> this.board = this.transpose(this.board);<br/> this.move_left();<br/> this.board = this.transpose(this.board);<br/> }</p>
-<p>move_down() {<br/> this.board = this.transpose(this.board).map(row =&gt; row.reverse());<br/> this.move_left();<br/> this.board = this.transpose(this.board).map(row =&gt; row.reverse());<br/> }</p>
-<p>transpose(board) {<br/> return board[0].map((_, colIndex) =&gt; board.map(row =&gt; row[colIndex]));<br/> }</p>
-<p>is_game_over() {<br/> if (this.board.flat().includes(0)) {<br/> return false;<br/> }<br/> for (let i = 0; i &lt; 4; i++) {<br/> for (let j = 0; j &lt; 4; j++) {<br/> if (i &lt; 3 &amp;&amp; this.board[i][j] === this.board[i + 1][j]) {<br/> return false;<br/> }<br/> if (j &lt; 3 &amp;&amp; this.board[i][j] === this.board[i][j + 1]) {<br/> return false;<br/> }<br/> }<br/> }<br/> return true;<br/> }</p>
-<p>getBoard() {<br/> return this.board;<br/> }<br/>}</p>
-<p><img alt="" height="451" src="./../images/螢幕擷取畫面 2024-06-05 231244.png" width="800"/></p>
-<p><img alt="" height="501" src="./../images/螢幕擷取畫面 2024-06-05 231300.png" width="800"/></p>
-<p><img alt="" height="498" src="./../images/螢幕擷取畫面 2024-06-05 231312.png" width="800"/></p>
-<p><img alt="" height="472" src="./../images/螢幕擷取畫面 2024-06-05 231338.png" width="800"/></p>
-<p><img alt="" height="499" src="./../images/螢幕擷取畫面 2024-06-05 231350.png" width="800"/></p>
-<p><img alt="" height="523" src="./../images/螢幕擷取畫面 2024-06-05 231416.png" width="800"/></p>
+<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">document.addEventListener('DOMContentLoaded', () =&gt; {
+const boardElement = document.getElementById('board');
+
+const game = new Game2048();
+renderBoard(game.getBoard());
+
+document.addEventListener('keydown', (event) =&gt; {
+switch (event.key) {
+case 'ArrowUp':
+game.move_up();
+break;
+case 'ArrowDown':
+game.move_down();
+break;
+case 'ArrowLeft':
+game.move_left();
+break;
+case 'ArrowRight':
+game.move_right();
+break;
+}
+renderBoard(game.getBoard());
+if (game.is_game_over()) {
+alert('Game Over!');
+}
+});
+
+function renderBoard(board) {
+boardElement.innerHTML = '';
+for (let row of board) {
+for (let cell of row) {
+const tile = document.createElement('div');
+tile.className = 'tile';
+tile.textContent = cell === 0 ? '' : cell;
+boardElement.appendChild(tile);
+}
+}
+}
+});
+
+class Game2048 {
+constructor() {
+this.board = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));
+this.addNewTile();
+this.addNewTile();
+}
+
+addNewTile() {
+const emptyCells = [];
+for (let i = 0; i &lt; 4; i++) {
+for (let j = 0; j &lt; 4; j++) {
+if (this.board[i][j] === 0) {
+emptyCells.push([i, j]);
+}
+}
+}
+if (emptyCells.length &gt; 0) {
+const [x, y] = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+this.board[x][y] = Math.random() &lt; 0.9 ? 2 : 4;
+}
+}
+
+compress(row) {
+const newRow = row.filter(val =&gt; val !== 0);
+while (newRow.length &lt; 4) newRow.push(0);
+return newRow;
+}
+
+merge(row) {
+for (let i = 0; i &lt; 3; i++) {
+if (row[i] === row[i + 1] &amp;&amp; row[i] !== 0) {
+row[i] *= 2;
+row[i + 1] = 0;
+}
+}
+return row;
+}
+
+move_left() {
+let newBoard = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));
+for (let i = 0; i &lt; 4; i++) {
+let newRow = this.compress(this.board[i]);
+newRow = this.merge(newRow);
+newRow = this.compress(newRow);
+newBoard[i] = newRow;
+}
+this.board = newBoard;
+this.addNewTile();
+}
+
+move_right() {
+this.board = this.board.map(row =&gt; row.reverse());
+this.move_left();
+this.board = this.board.map(row =&gt; row.reverse());
+}
+
+move_up() {
+this.board = this.transpose(this.board);
+this.move_left();
+this.board = this.transpose(this.board);
+}
+
+move_down() {
+this.board = this.transpose(this.board).map(row =&gt; row.reverse());
+this.move_left();
+this.board = this.transpose(this.board).map(row =&gt; row.reverse());
+}
+
+transpose(board) {
+return board[0].map((_, colIndex) =&gt; board.map(row =&gt; row[colIndex]));
+}
+
+is_game_over() {
+if (this.board.flat().includes(0)) {
+return false;
+}
+for (let i = 0; i &lt; 4; i++) {
+for (let j = 0; j &lt; 4; j++) {
+if (i &lt; 3 &amp;&amp; this.board[i][j] === this.board[i + 1][j]) {
+return false;
+}
+if (j &lt; 3 &amp;&amp; this.board[i][j] === this.board[i][j + 1]) {
+return false;
+}
+}
+}
+return true;
+}
+
+getBoard() {
+return this.board;
+}
+}</pre>
+</div>
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"></div>
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><img alt="" height="226" src="./../images/螢幕擷取畫面 2024-06-05 231244.png" width="400"/></div>
+</div>
+<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span></span></div>
+</div>
 <p></p>
-<p><img alt="" height="470" src="./../images/螢幕擷取畫面 2024-06-05 231428.png" width="800"/></p>
-<p>並在資料夾內</p>
-<p></p>
-<p></p>
+<p><img alt="" height="251" src="./../images/螢幕擷取畫面 2024-06-05 231300.png" width="400"/></p>
+<p><img alt="" height="249" src="./../images/螢幕擷取畫面 2024-06-05 231312.png" width="400"/></p>
+<p><img alt="" height="236" src="./../images/螢幕擷取畫面 2024-06-05 231338.png" width="400"/></p>
+<p><img alt="" height="250" src="./../images/螢幕擷取畫面 2024-06-05 231350.png" width="400"/></p>
+<p><img alt="" height="220" src="./../images/螢幕擷取畫面 2024-06-05 231125.png" width="400"/></p>
+<p><img alt="" height="228" src="./../images/螢幕擷取畫面 2024-06-05 231158.png" width="400"/></p>
+<p><img alt="" height="235" src="./../images/螢幕擷取畫面 2024-06-05 231428.png" width="400"/></p>
 <p></p>
 <p></p>
 <p></p>

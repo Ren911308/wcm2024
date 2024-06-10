@@ -151,9 +151,10 @@
 <p>1.在Replit 平台上的分組倉儲權限設定</p>
 <p>2.Putty Solvespace STL 零件檢視方法</p>
 <p>3.大規模人工智慧運算的時代：前景、影響及回應</p>
+<p><span>第一週:建立個人的課程倉儲 第二週:chatgpt 使用 第三週:配置可攜程式系統 第四週:建立個人最短網址網站 第五週:對 ChatGPT 及製作影片 第六週:建立Pro Git 電子書 第七週:建立單字查詢網頁 第八週:建立領英帳號 第九週:建立 angry bird 程式並執行 第十週:建立每個人的帳號及網站 第十四週:分組執行猜數字遊戲</span></p>
+<p><span>W1 Github 帳號登入依照規定需要兩段式認證 W2 簡單說明如何利用 Gmail 帳號登入 chatgpt, 並進行提問 W3 計算機概論, 利用 Github Classroom 進行分組作業派送 W4 如何在網頁推送至 Github 倉儲之前檢查所編輯的網頁內容 W5 利用與 ChatGPT 的對話 W6 閱讀 Git 相關原文書, 需要認識多少英文單字 W7 建議學員長期維護個人的履歷網站, 並註冊領英帳號. W8 說明如何在網頁中加入 Brython 程式應用 W1 說明如何在網頁中加入 Brython 程式應用 W12 Python 可攜系統 W13 從單機猜數字遊戲與 AI 應用談起</span></p>
 </div>
-</nav></div>
-<h2>W6</h2>
+</nav></div><h2>W6</h2>
 <p>將下面題目解答並放入自己的網站上</p>
 <p>根據您的專業, 就 git 的使用, 從與 ChatGPT 的對話, 將內容整理到個人的第六網誌, 其中包含:</p>
 <p>1.git 的發展歷史</p>
@@ -462,42 +463,26 @@
 <p>1.選擇自己想要製作的主題，我選擇的是2048小遊戲，並<span>下載可攜程式環境: </span><a href="http://229.cycu.org/portable_2024.7z">portable_2024.7z</a><span> (需要密碼, 下載 540MB, 解開壓縮後約 1.8GB)</span></p>
 <p>2.使用CHATGPT並詢問<span style="color: #000000; background-color: #00ffff;">幫我用python 做出2048的小遊戲 並用網頁方式呈現</span><span style="color: #000000;">，會出現前端展示（HTML, CSS, JavaScript）並顯示出<span>HTML, CSS, JavaScript各自的程式</span></span></p>
 <p><strong>HTML</strong>：</p>
-<p><span style="color: #000000;"><span>&lt;!DOCTYPE html&gt;<br/>&lt;html lang="en"&gt;<br/>&lt;head&gt;<br/> &lt;meta charset="UTF-8"&gt;<br/> &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br/> &lt;title&gt;2048 Game&lt;/title&gt;<br/> &lt;link rel="stylesheet" href="styles.css"&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/> &lt;div class="container"&gt;<br/> &lt;div class="board" id="board"&gt;&lt;/div&gt;<br/> &lt;/div&gt;<br/> &lt;script src="script.js"&gt;&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/></span></span></p>
-<p><span style="color: #000000;"><span><img alt="" height="440" src="/images/螢幕擷取畫面 2024-06-05 231125.png" width="800"/></span></span></p>
-<h5><strong>CSS (styles.css)</strong>：</h5>
+<p>&lt;!DOCTYPE html&gt;<br/>&lt;html lang="en"&gt;<br/>&lt;head&gt;<br/> &lt;meta charset="UTF-8"&gt;<br/> &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br/> &lt;title&gt;2048 Game&lt;/title&gt;<br/> &lt;link rel="stylesheet" href="styles.css"&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/> &lt;div class="container"&gt;<br/> &lt;div class="board" id="board"&gt;&lt;/div&gt;<br/> &lt;/div&gt;<br/> &lt;script src="script.js"&gt;&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;</p>
+<p><img alt="" height="220" src="/images/螢幕擷取畫面 2024-06-05 231125.png" width="400"/></p>
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span></span></div>
+<h4><strong>CSS (styles.css)</strong>：</h4>
 <p>body {<br/> display: flex;<br/> justify-content: center;<br/> align-items: center;<br/> height: 100vh;<br/> background-color: #faf8ef;<br/>}</p>
 <p>.container {<br/> display: flex;<br/> justify-content: center;<br/> align-items: center;<br/>}</p>
 <p>.board {<br/> display: grid;<br/> grid-template-columns: repeat(4, 100px);<br/> grid-template-rows: repeat(4, 100px);<br/> gap: 10px;<br/> background-color: #bbada0;<br/> padding: 10px;<br/> border-radius: 10px;<br/>}</p>
 <p>.tile {<br/> width: 100px;<br/> height: 100px;<br/> background-color: #cdc1b4;<br/> display: flex;<br/> justify-content: center;<br/> align-items: center;<br/> font-size: 24px;<br/> font-weight: bold;<br/> color: #776e65;<br/> border-radius: 5px;<br/>}</p>
-<p><img alt="" height="456" src="/images/螢幕擷取畫面 2024-06-05 231158.png" width="800"/></p>
-<p><strong><img alt="" height="503" src="/images/螢幕擷取畫面 2024-06-05 231213.png" width="800"/></strong></p>
-<p><strong><img alt="" height="488" src="/images/螢幕擷取畫面 2024-06-05 231229.png" width="800"/></strong></p>
+<p><img alt="" height="228" src="/images/螢幕擷取畫面 2024-06-05 231158.png" width="400"/></p>
+<p><img alt="" height="252" src="/images/螢幕擷取畫面 2024-06-05 231213.png" width="400"/></p>
+<p><img alt="" height="244" src="/images/螢幕擷取畫面 2024-06-05 231229.png" width="400"/></p>
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span></span></div>
 <p><strong>JavaScript (script.js)</strong>：</p>
-<p>document.addEventListener('DOMContentLoaded', () =&gt; {<br/> const boardElement = document.getElementById('board');</p>
-<p>const game = new Game2048();<br/> renderBoard(game.getBoard());</p>
-<p>document.addEventListener('keydown', (event) =&gt; {<br/> switch (event.key) {<br/> case 'ArrowUp':<br/> game.move_up();<br/> break;<br/> case 'ArrowDown':<br/> game.move_down();<br/> break;<br/> case 'ArrowLeft':<br/> game.move_left();<br/> break;<br/> case 'ArrowRight':<br/> game.move_right();<br/> break;<br/> }<br/> renderBoard(game.getBoard());<br/> if (game.is_game_over()) {<br/> alert('Game Over!');<br/> }<br/> });</p>
-<p>function renderBoard(board) {<br/> boardElement.innerHTML = '';<br/> for (let row of board) {<br/> for (let cell of row) {<br/> const tile = document.createElement('div');<br/> tile.className = 'tile';<br/> tile.textContent = cell === 0 ? '' : cell;<br/> boardElement.appendChild(tile);<br/> }<br/> }<br/> }<br/>});</p>
-<p>class Game2048 {<br/> constructor() {<br/> this.board = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));<br/> this.addNewTile();<br/> this.addNewTile();<br/> }</p>
-<p>addNewTile() {<br/> const emptyCells = [];<br/> for (let i = 0; i &lt; 4; i++) {<br/> for (let j = 0; j &lt; 4; j++) {<br/> if (this.board[i][j] === 0) {<br/> emptyCells.push([i, j]);<br/> }<br/> }<br/> }<br/> if (emptyCells.length &gt; 0) {<br/> const [x, y] = emptyCells[Math.floor(Math.random() * emptyCells.length)];<br/> this.board[x][y] = Math.random() &lt; 0.9 ? 2 : 4;<br/> }<br/> }</p>
-<p>compress(row) {<br/> const newRow = row.filter(val =&gt; val !== 0);<br/> while (newRow.length &lt; 4) newRow.push(0);<br/> return newRow;<br/> }</p>
-<p>merge(row) {<br/> for (let i = 0; i &lt; 3; i++) {<br/> if (row[i] === row[i + 1] &amp;&amp; row[i] !== 0) {<br/> row[i] *= 2;<br/> row[i + 1] = 0;<br/> }<br/> }<br/> return row;<br/> }</p>
-<p>move_left() {<br/> let newBoard = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));<br/> for (let i = 0; i &lt; 4; i++) {<br/> let newRow = this.compress(this.board[i]);<br/> newRow = this.merge(newRow);<br/> newRow = this.compress(newRow);<br/> newBoard[i] = newRow;<br/> }<br/> this.board = newBoard;<br/> this.addNewTile();<br/> }</p>
-<p>move_right() {<br/> this.board = this.board.map(row =&gt; row.reverse());<br/> this.move_left();<br/> this.board = this.board.map(row =&gt; row.reverse());<br/> }</p>
-<p>move_up() {<br/> this.board = this.transpose(this.board);<br/> this.move_left();<br/> this.board = this.transpose(this.board);<br/> }</p>
-<p>move_down() {<br/> this.board = this.transpose(this.board).map(row =&gt; row.reverse());<br/> this.move_left();<br/> this.board = this.transpose(this.board).map(row =&gt; row.reverse());<br/> }</p>
-<p>transpose(board) {<br/> return board[0].map((_, colIndex) =&gt; board.map(row =&gt; row[colIndex]));<br/> }</p>
-<p>is_game_over() {<br/> if (this.board.flat().includes(0)) {<br/> return false;<br/> }<br/> for (let i = 0; i &lt; 4; i++) {<br/> for (let j = 0; j &lt; 4; j++) {<br/> if (i &lt; 3 &amp;&amp; this.board[i][j] === this.board[i + 1][j]) {<br/> return false;<br/> }<br/> if (j &lt; 3 &amp;&amp; this.board[i][j] === this.board[i][j + 1]) {<br/> return false;<br/> }<br/> }<br/> }<br/> return true;<br/> }</p>
-<p>getBoard() {<br/> return this.board;<br/> }<br/>}</p>
-<p><img alt="" height="451" src="/images/螢幕擷取畫面 2024-06-05 231244.png" width="800"/></p>
-<p><img alt="" height="501" src="/images/螢幕擷取畫面 2024-06-05 231300.png" width="800"/></p>
-<p><img alt="" height="498" src="/images/螢幕擷取畫面 2024-06-05 231312.png" width="800"/></p>
-<p><img alt="" height="472" src="/images/螢幕擷取畫面 2024-06-05 231338.png" width="800"/></p>
-<p><img alt="" height="499" src="/images/螢幕擷取畫面 2024-06-05 231350.png" width="800"/></p>
-<p><img alt="" height="523" src="/images/螢幕擷取畫面 2024-06-05 231416.png" width="800"/></p>
-<p></p>
-<p><img alt="" height="470" src="/images/螢幕擷取畫面 2024-06-05 231428.png" width="800"/></p>
-<p></p>
-<p></p>
+<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">document.addEventListener('DOMContentLoaded', () =&gt; {<br/> const boardElement = document.getElementById('board');<br/><br/> const game = new Game2048();<br/> renderBoard(game.getBoard());<br/><br/> document.addEventListener('keydown', (event) =&gt; {<br/> switch (event.key) {<br/> case 'ArrowUp':<br/> game.move_up();<br/> break;<br/> case 'ArrowDown':<br/> game.move_down();<br/> break;<br/> case 'ArrowLeft':<br/> game.move_left();<br/> break;<br/> case 'ArrowRight':<br/> game.move_right();<br/> break;<br/> }<br/> renderBoard(game.getBoard());<br/> if (game.is_game_over()) {<br/> alert('Game Over!');<br/> }<br/> });<br/><br/> function renderBoard(board) {<br/> boardElement.innerHTML = '';<br/> for (let row of board) {<br/> for (let cell of row) {<br/> const tile = document.createElement('div');<br/> tile.className = 'tile';<br/> tile.textContent = cell === 0 ? '' : cell;<br/> boardElement.appendChild(tile);<br/> }<br/> }<br/> }<br/>});<br/><br/>class Game2048 {<br/> constructor() {<br/> this.board = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));<br/> this.addNewTile();<br/> this.addNewTile();<br/> }<br/><br/> addNewTile() {<br/> const emptyCells = [];<br/> for (let i = 0; i &lt; 4; i++) {<br/> for (let j = 0; j &lt; 4; j++) {<br/> if (this.board[i][j] === 0) {<br/> emptyCells.push([i, j]);<br/> }<br/> }<br/> }<br/> if (emptyCells.length &gt; 0) {<br/> const [x, y] = emptyCells[Math.floor(Math.random() * emptyCells.length)];<br/> this.board[x][y] = Math.random() &lt; 0.9 ? 2 : 4;<br/> }<br/> }<br/><br/> compress(row) {<br/> const newRow = row.filter(val =&gt; val !== 0);<br/> while (newRow.length &lt; 4) newRow.push(0);<br/> return newRow;<br/> }<br/><br/> merge(row) {<br/> for (let i = 0; i &lt; 3; i++) {<br/> if (row[i] === row[i + 1] &amp;&amp; row[i] !== 0) {<br/> row[i] *= 2;<br/> row[i + 1] = 0;<br/> }<br/> }<br/> return row;<br/> }<br/><br/> move_left() {<br/> let newBoard = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));<br/> for (let i = 0; i &lt; 4; i++) {<br/> let newRow = this.compress(this.board[i]);<br/> newRow = this.merge(newRow);<br/> newRow = this.compress(newRow);<br/> newBoard[i] = newRow;<br/> }<br/> this.board = newBoard;<br/> this.addNewTile();<br/> }<br/><br/> move_right() {<br/> this.board = this.board.map(row =&gt; row.reverse());<br/> this.move_left();<br/> this.board = this.board.map(row =&gt; row.reverse());<br/> }<br/><br/> move_up() {<br/> this.board = this.transpose(this.board);<br/> this.move_left();<br/> this.board = this.transpose(this.board);<br/> }<br/><br/> move_down() {<br/> this.board = this.transpose(this.board).map(row =&gt; row.reverse());<br/> this.move_left();<br/> this.board = this.transpose(this.board).map(row =&gt; row.reverse());<br/> }<br/><br/> transpose(board) {<br/> return board[0].map((_, colIndex) =&gt; board.map(row =&gt; row[colIndex]));<br/> }<br/><br/> is_game_over() {<br/> if (this.board.flat().includes(0)) {<br/> return false;<br/> }<br/> for (let i = 0; i &lt; 4; i++) {<br/> for (let j = 0; j &lt; 4; j++) {<br/> if (i &lt; 3 &amp;&amp; this.board[i][j] === this.board[i + 1][j]) {<br/> return false;<br/> }<br/> if (j &lt; 3 &amp;&amp; this.board[i][j] === this.board[i][j + 1]) {<br/> return false;<br/> }<br/> }<br/> }<br/> return true;<br/> }<br/><br/> getBoard() {<br/> return this.board;<br/> }<br/>}</div>
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><img alt="" height="226" src="/images/螢幕擷取畫面 2024-06-05 231244.png" width="400"/></div>
+</div>
+<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span></span></div>
+</div>
 <p></p>
 <p></p>
 <p></p>
