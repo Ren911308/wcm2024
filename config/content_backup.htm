@@ -742,9 +742,479 @@ return this.board;
 <p><img alt="" height="220" src="/images/螢幕擷取畫面 2024-06-05 231125.png" width="400"/></p>
 <p><img alt="" height="228" src="/images/螢幕擷取畫面 2024-06-05 231158.png" width="400"/></p>
 <p><img alt="" height="235" src="/images/螢幕擷取畫面 2024-06-05 231428.png" width="400"/></p>
+<p>在資料夾內新增這些</p>
+<p><img alt="" height="83" src="/images/螢幕擷取畫面 2024-06-10 133431.png" width="400"/></p>
+<p>static</p>
+<p><img alt="" height="49" src="/images/螢幕擷取畫面 2024-06-10 134522.png" width="400"/></p>
+<p>templates</p>
+<p><img alt="" height="23" src="/images/螢幕擷取畫面 2024-06-10 134710.png" width="400"/></p>
+<p>在指定的IP地址（192.168.56.1）和端口（<code>8000</code>）上啟動HTTP伺服器。可以在瀏覽器中訪問http://192.168.56.1:8000/玩2048小遊戲，向CHATGPT詢問新增一個app.py的代碼。並在內部複製貼上程式</p>
+<p><img alt="" height="508" src="/images/螢幕擷取畫面 2024-06-10 134105.png" width="400"/></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;2048 Game&lt;/title&gt;
+&lt;style&gt;
+    .board {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-gap: 5px;
+        background-color: #bbada0;
+        padding: 5px;
+        border-radius: 5px;
+        margin: auto;
+    }
+
+    .tile {
+        width: 100px;
+        height: 100px;
+        background-color: #cdc1b4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        border-radius: 5px;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="board" id="board"&gt;&lt;/div&gt;
+&lt;script&gt;
+    document.addEventListener('DOMContentLoaded', () =&gt; {
+        const boardElement = document.getElementById('board');
+
+        const game = new Game2048();
+        renderBoard(game.getBoard());
+
+        document.addEventListener('keydown', (event) =&gt; {
+            let moved = false;
+            switch (event.key) {
+                case 'ArrowUp':
+                    moved = game.move_up();
+                    break;
+                case 'ArrowDown':
+                    moved = game.move_down();
+                    break;
+                case 'ArrowLeft':
+                    moved = game.move_left();
+                    break;
+                case 'ArrowRight':
+                    moved = game.move_right();
+                    break;
+            }
+            if (moved) {
+                renderBoard(game.getBoard());
+                if (game.is_game_over()) {
+                    alert('Game Over!');
+                }
+            }
+        });
+
+        function renderBoard(board) {
+            boardElement.innerHTML = '';
+            for (let row of board) {
+                for (let cell of row) {
+                    const tile = document.createElement('div');
+                    tile.className = 'tile';
+                    tile.textContent = cell === 0 ? '' : cell;
+                    boardElement.appendChild(tile);
+                }
+            }
+        }
+    });
+
+    class Game2048 {
+        constructor() {
+            this.board = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));
+            this.addNewTile();
+            this.addNewTile();
+        }
+
+        addNewTile() {
+            const emptyCells = [];
+            for (let i = 0; i &lt; 4; i++) {
+                for (let j = 0; j &lt; 4; j++) {
+                    if (this.board[i][j] === 0) {
+                        emptyCells.push([i, j]);
+                    }
+                }
+            }
+            if (emptyCells.length &gt; 0) {
+                const [x, y] = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+                this.board[x][y] = Math.random() &lt; 0.9 ? 2 : 4;
+            }
+        }
+
+        compress(row) {
+            const newRow = row.filter(val =&gt; val !== 0);
+            while (newRow.length &lt; 4) newRow.push(0);
+            return newRow;
+        }
+
+        merge(row) {
+            for (let i = 0; i &lt; 3; i++) {
+                if (row[i] === row[i + 1] &amp;&amp; row[i] !== 0) {
+                    row[i] *= 2;
+                    row[i + 1] = 0;
+                }
+            }
+            return row;
+        }
+
+        move_left() {
+            let moved = false;
+            for (let i = 0; i &lt; 4; i++) {
+                let newRow = this.compress(this.board[i]);
+                newRow = this.merge(newRow);
+                newRow = this.compress(newRow);
+                if (newRow.toString() !== this.board[i].toString()) {
+                    this.board[i] = newRow;
+                    moved = true;
+                }
+            }
+            if (moved) {
+                this.addNewTile();
+            }
+            return moved;
+        }
+
+        move_right() {
+            let moved = false;
+            for (let i = 0; i &lt; 4; i++) {
+                let newRow = this.board[i].slice().reverse();
+                newRow = this.compress(newRow);
+                newRow = this.merge(newRow);
+                newRow = this.compress(newRow);
+                newRow.reverse();
+                if (newRow.toString() !== this.board[i].toString()) {
+                    this.board[i] = newRow;
+                    moved = true;
+                }
+            }
+            if (moved) {
+                this.addNewTile();
+            }
+            return moved;
+        }
+
+        move_up() {
+            let moved = false;
+            for (let j = 0; j &lt; 4; j++) {
+                let col = this.board.map(row =&gt; row[j]);
+                let newCol = this.compress(col);
+                newCol = this.merge(newCol);
+                newCol = this.compress(newCol);
+                for (let i = 0; i &lt; 4; i++) {
+                    if (this.board[i][j] !== newCol[i]) {
+                        moved = true;
+                        this.board[i][j] = newCol[i];
+                    }
+                }
+            }
+            if (moved) {
+                this.addNewTile();
+            }
+            return moved;
+        }
+
+        move_down() {
+            let moved = false;
+            for (let j = 0; j &lt; 4; j++) {
+                let col = this.board.map(row =&gt; row[j]);
+                let newCol = col.slice().reverse();
+                newCol = this.compress(newCol);
+                newCol = this.merge(newCol);
+                newCol = this.compress(newCol);
+                newCol.reverse();
+                let shift = 0;
+                for (let i = 3; i &gt;= 0; i--) {
+                    if (this.board[i][j] !== newCol[3 - shift]) {
+                        moved = true;
+                        this.board[i][j] = newCol[3 - shift];
+                    }
+                    shift++;
+                }
+            }
+            if (moved) {
+                this.addNewTile();
+            }
+            return moved;
+        }
+
+        is_game_over() {
+            if (this.board.flat().includes(0)) {
+                return false;
+            }
+            for (let i = 0; i &lt; 4; i++) {
+                for (let j = 0; j &lt; 4; j++) {
+                    if (i &lt; 3 &amp;&amp; this.board[i][j] === this.board[i + 1][j]) {
+                        return false;
+                    }
+                    if (j &lt; 3 &amp;&amp; this.board[i][j] === this.board[i][j + 1]) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        getBoard() {
+            return this.board;
+        }
+    }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 <p></p>
+<p><img alt="" height="535" src="/images/螢幕擷取畫面 2024-06-10 134114.png" width="400"/></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #faf8ef;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    background-color: #bbada0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: #cdc1b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #776e65;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+</pre>
 <p></p>
+<p><img alt="" height="530" src="/images/螢幕擷取畫面 2024-06-10 134121.png" width="400"/></p>
 <p></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">document.addEventListener('DOMContentLoaded', () =&gt; {
+    const boardElement = document.getElementById('board');
+    const resetButton = document.getElementById('reset-button');
+
+    let game = new Game2048();
+    renderBoard(game.getBoard());
+
+    document.addEventListener('keydown', (event) =&gt; {
+        let moved = false;
+        switch (event.key) {
+            case 'ArrowUp':
+                moved = game.move_up();
+                break;
+            case 'ArrowDown':
+                moved = game.move_down();
+                break;
+            case 'ArrowLeft':
+                moved = game.move_left();
+                break;
+            case 'ArrowRight':
+                moved = game.move_right();
+                break;
+        }
+        if (moved) {
+            renderBoard(game.getBoard());
+            if (game.is_game_over()) {
+                alert('Game Over!');
+            }
+        }
+    });
+
+    resetButton.addEventListener('click', () =&gt; {
+        game = new Game2048();
+        renderBoard(game.getBoard());
+    });
+
+    function renderBoard(board) {
+        boardElement.innerHTML = '';
+        for (let row of board) {
+            for (let cell of row) {
+                const tile = document.createElement('div');
+                tile.className = 'tile';
+                tile.textContent = cell === 0 ? '' : cell;
+                boardElement.appendChild(tile);
+            }
+        }
+    }
+});
+
+class Game2048 {
+    constructor() {
+        this.board = Array.from({ length: 4 }, () =&gt; Array(4).fill(0));
+        this.addNewTile();
+        this.addNewTile();
+    }
+
+    addNewTile() {
+        const emptyCells = [];
+        for (let i = 0; i &lt; 4; i++) {
+            for (let j = 0; j &lt; 4; j++) {
+                if (this.board[i][j] === 0) {
+                    emptyCells.push([i, j]);
+                }
+            }
+        }
+        if (emptyCells.length &gt; 0) {
+            const [x, y] = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+            this.board[x][y] = Math.random() &lt; 0.9 ? 2 : 4;
+        }
+    }
+
+    compress(row) {
+        const newRow = row.filter(val =&gt; val !== 0);
+        while (newRow.length &lt; 4) newRow.push(0);
+        return newRow;
+    }
+
+    merge(row) {
+        for (let i = 0; i &lt; 3; i++) {
+            if (row[i] === row[i + 1] &amp;&amp; row[i] !== 0) {
+                row[i] *= 2;
+                row[i + 1] = 0;
+            }
+        }
+        return row;
+    }
+
+    move_left() {
+        let moved = false;
+        for (let i = 0; i &lt; 4; i++) {
+            let newRow = this.compress(this.board[i]);
+            newRow = this.merge(newRow);
+            newRow = this.compress(newRow);
+            if (newRow.toString() !== this.board[i].toString()) {
+                this.board[i] = newRow;
+                moved = true;
+            }
+        }
+        if (moved) {
+            this.addNewTile();
+        }
+        return moved;
+    }
+
+    move_right() {
+        let moved = false;
+        for (let i = 0; i &lt; 4; i++) {
+            let newRow = this.board[i].slice().reverse();
+            newRow = this.compress(newRow);
+            newRow = this.merge(newRow);
+            newRow = this.compress(newRow);
+            newRow.reverse();
+            if (newRow.toString() !== this.board[i].toString()) {
+                this.board[i] = newRow;
+                moved = true;
+            }
+        }
+        if (moved) {
+            this.addNewTile();
+        }
+        return moved;
+    }
+
+    move_up() {
+        let moved = false;
+        for (let j = 0; j &lt; 4; j++) {
+            let col = this.board.map(row =&gt; row[j]);
+            let newCol = this.compress(col);
+            newCol = this.merge(newCol);
+            newCol = this.compress(newCol);
+            for (let i = 0; i &lt; 4; i++) {
+                if (this.board[i][j] !== newCol[i]) {
+                    this.board[i][j] = newCol[i];
+                    moved = true;
+                }
+            }
+        }
+        if (moved) {
+            this.addNewTile();
+        }
+        return moved;
+    }
+
+    move_down() {
+        let moved = false;
+        for (let j = 0; j &lt; 4; j++) {
+            let col = this.board.map(row =&gt; row[j]);
+            let newCol = this.compress(col.reverse());
+            newCol = this.merge(newCol);
+            newCol = this.compress(newCol);
+            newCol.reverse();
+            for (let i = 0; i &lt; 4; i++) {
+                if (this.board[3 - i][j] !== newCol[i]) {
+                    this.board[3 - i][j] = newCol[i];
+                    moved = true;
+                }
+            }
+        }
+        if (moved) {
+            this.addNewTile();
+        }
+        return moved;
+    }
+
+    is_game_over() {
+        if (this.board.flat().includes(0)) {
+            return false;
+        }
+        for (let i = 0; i &lt; 4; i++) {
+            for (let j = 0; j &lt; 4; j++) {
+                if (i &lt; 3 &amp;&amp; this.board[i][j] === this.board[i + 1][j]) {
+                    return false;
+                }
+                if (j &lt; 3 &amp;&amp; this.board[i][j] === this.board[i][j + 1]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    getBoard() {
+        return this.board;
+    }
+}
+
+
+
+
+</pre>
+<p><img alt="" height="232" src="/images/螢幕擷取畫面 2024-06-10 134130.png" width="400"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+return render_template('index.html')
+
+if __name__ == '__main__':
+app.run(host='192.168.56.1', port=8000)</pre>
+<p>並不停地修改獲得正確的程式就能體驗2048了<br/><br/></p>
 <p></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
