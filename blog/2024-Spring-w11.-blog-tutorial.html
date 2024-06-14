@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>網際內容管理系統 - Authors</title>
+  <title>2024 W11 課程</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -18,6 +18,7 @@
 
   <!-- Feed -->
         <link href="https://github.io/41223126/wcm2044/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="網際內容管理系統 Full Atom Feed" />
+          <link href="https://github.io/41223126/wcm2044/blog/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="網際內容管理系統 Categories Atom Feed" />
 
   <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
 
@@ -39,27 +40,49 @@
   <![endif]-->
 
 
+    <link href="./2024-Spring-w11.-blog-tutorial.html" rel="canonical" />
+
+        <meta name="description" content="網際內容管理第十一週課程, 說明如何在網頁中加入 Brython 程式應用">
+
+        <meta name="author" content="kmol">
+
+        <meta name="tags" content="網誌編寫">
+
+
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="網際內容管理系統"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="網際內容管理系統"/>
-<meta property="og:description" content="View the blog."/>
+<meta property="og:title" content="2024 W11 課程"/>
+<meta property="og:description" content="網際內容管理第十一週課程, 說明如何在網頁中加入 Brython 程式應用"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="./"/>
-<meta property="og:image" content="./theme/images/home-bg.jpg">
+<meta property="og:url" content="./2024-Spring-w11.-blog-tutorial.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2024-06-14 10:45:00+08:00"/>
+<meta property="article:modified_time" content="2024-06-14 14:31:29.783273+08:00"/>
+<meta property="article:author" content="./author/kmol.html">
+<meta property="article:section" content="w11"/>
+<meta property="article:tag" content="網誌編寫"/>
+<meta property="og:image" content="./theme/images/post-bg.jpg">
 
 <!-- Twitter Card -->
 
 <script type="application/ld+json">
 {
-  "@context" : "http://schema.org",
-  "@type" : "Website",
-  "name": " 網際內容管理系統 ",
-  "url" : "./",
-  "image": "./theme/images/home-bg.jpg",
-  "description": "View the blog."
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "2024 W11 課程",
+  "headline": "2024 W11 課程",
+  "datePublished": "2024-06-14 10:45:00+08:00",
+  "dateModified": "2024-06-14 14:31:29.783273+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "kmol",
+    "url": "./author/kmol.html"
+  },
+  "image": "./theme/images/post-bg.jpg",
+  "url": "./2024-Spring-w11.-blog-tutorial.html",
+  "description": "網際內容管理第十一週課程, 說明如何在網頁中加入 Brython 程式應用"
 }
 </script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
@@ -164,19 +187,31 @@ init_mathjax();
     </ul>
   </div>
 </nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="blog-header" class="has-cover">
+    <header id="post-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
             <span id="home-button" class="nav-button">
-                <a class="home-button" href="./" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+                <a class="home-button" href="./index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
             </span>
           <span id="menu-button" class="nav-button">
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">Articles by </h1>
+        <h1 class="post-title">2024 W11 課程</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/kmol.html">Kmol</a>
+            | <time datetime="Fri 14 June 2024">Fri 14 June 2024</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <span class="post-meta"> | Updated on Fri 14 June 2024</span>
             <div class="post-cover cover" style="background-image: url('./theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -190,15 +225,78 @@ init_mathjax();
     </form>
 </section>
 
-      <article class="post">
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
         <div class="inner">
-            <a href="./author/kmol.html" rel="bookmark">
-                <h2 class="post-title">
-                    kmol (11)
-                </h2>
-            </a>
-        </div>
-      </article>
+            <section class="post-content">
+                <p>網際內容管理第十一週課程, 說明如何在網頁中加入 Brython 程式應用</p>
+
+
+<h1>1a 評分倉儲</h1>
+<p><a href="https://github.com/mdewcm2024/1astud-site">https://github.com/mdewcm2024/1astud-site</a></p>
+<p><a href="https://mdewcm2024.github.io/1astud-site/content/index.html">https://mdewcm2024.github.io/1astud-site/content/index.html</a></p>
+<h1>有關 git pull 評分倉儲之後的處理要點</h1>
+<p><a href="https://www.youtube.com/watch?v=UgXZcpfSYXU">影片</a></p>
+<h1>各組員或各組先將改版資料推向個人或分組的倉儲分支後, 再與主分支的版本內容合併</h1>
+<p><a href="https://www.youtube.com/watch?v=UgXZcpfSYXU">影片</a></p>
+<h1>從教務主機直接擷取資料</h1>
+<p>利用 <a href="https://mde.tw/wcm2024/downloads/wsgi_v1_py.txt">wsgi_v1.py</a></p>
+<p>可以取得結果<a href="https://mde.tw/wcm2024/downloads/wsgi_v1_output.txt">wsgi_v1_output.txt</a></p>
+<p>表示可以利用 Flask 建置網站程式取下教務主機中的相關資料.</p>
+<p>以下影片說明如何利用 wsgi_v2.py 擷取各學期班級課表:<a href="https://www.youtube.com/watch?v=UgXZcpfSYXU">影片</a></p>
+<p>說明如何將 Python 程式配置為 Windows 操作系統中的服務:<a href="https://www.youtube.com/watch?v=UgXZcpfSYXU">影片</a></p>
+<p>經由上述影片將程式配置在伺服器後, 可以從229 主機取下設一甲 90 學年度第一學期的課表</p>
+<p>利用<a href="https://mde.tw/wcm2024/downloads/wsgi_v2_py.txt">wsgi_v2.py</a></p>
+<p>可以取得以下結果:</p>
+<h1>完成品</h1>
+<p><a href="https://ren911308.github.io/wcm2024/content/w13">完成品</a></p>
+<h1>Brython程式環境</h1>
+<p>頁面 demo 在同一頁面下入多個線上 Ace 編輯器與執行按鈕 (practice_html.txt 動態頁面超文件).</p>
+<p>practice_html.txt 動態頁面超文件應該可以在啟動 Brython 時, 設定將 .py 檔案放入 downloads/py 目錄中引用.</p>
+<p>亦即將所有對應的 html 也使用 Brython 產生, 然後寫為<a href="https://docs.python.org/3/tutorial/classes.html">class</a></p>
+<p>後, 在範例導入時透過 <a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">instance</a></p>
+<p>引用</p>
+<!-- 啟動 Brython -->
+
+<script>
+
+window.onload=function(){
+
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+
+</script>
+
+<p>從 1 累加到 100:
+將 iterable 與 iterator 相關說明, 利用 Brython 與 Ace Editor 整理在這個頁面.</p>
+            </section>
+
+            <section class="post-info">
+                <aside class="post-tags">
+<a href="./tag/wang-zhi-bian-xie.html">網誌編寫</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="./2024-Spring-w10.-blog-tutorial.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">2024 W10 課程</h2>
+                            <p class="post-nav-excerpt">四技 WCM 第十週課程，用replit來維護新的分組倉儲</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
       <!-- TODO : Body class -->
     <div id="body-class" style="display: none;" class=""></div>
 

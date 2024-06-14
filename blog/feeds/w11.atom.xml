@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w11</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/w11.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T14:31:29+08:00</updated><entry><title>2024 W11 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w11.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T10:45:00+08:00</published><updated>2024-06-14T14:31:29+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w11.-blog-tutorial.html</id><summary type="html">&lt;p&gt;網際內容管理第十一週課程, 說明如何在網頁中加入 Brython 程式應用&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;網際內容管理第十一週課程, 說明如何在網頁中加入 Brython 程式應用&lt;/p&gt;
+
+
+&lt;h1&gt;1a 評分倉儲&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/mdewcm2024/1astud-site"&gt;https://github.com/mdewcm2024/1astud-site&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mdewcm2024.github.io/1astud-site/content/index.html"&gt;https://mdewcm2024.github.io/1astud-site/content/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;有關 git pull 評分倉儲之後的處理要點&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=UgXZcpfSYXU"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;各組員或各組先將改版資料推向個人或分組的倉儲分支後, 再與主分支的版本內容合併&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=UgXZcpfSYXU"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;從教務主機直接擷取資料&lt;/h1&gt;
+&lt;p&gt;利用 &lt;a href="https://mde.tw/wcm2024/downloads/wsgi_v1_py.txt"&gt;wsgi_v1.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以取得結果&lt;a href="https://mde.tw/wcm2024/downloads/wsgi_v1_output.txt"&gt;wsgi_v1_output.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;表示可以利用 Flask 建置網站程式取下教務主機中的相關資料.&lt;/p&gt;
+&lt;p&gt;以下影片說明如何利用 wsgi_v2.py 擷取各學期班級課表:&lt;a href="https://www.youtube.com/watch?v=UgXZcpfSYXU"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;說明如何將 Python 程式配置為 Windows 操作系統中的服務:&lt;a href="https://www.youtube.com/watch?v=UgXZcpfSYXU"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;經由上述影片將程式配置在伺服器後, 可以從229 主機取下設一甲 90 學年度第一學期的課表&lt;/p&gt;
+&lt;p&gt;利用&lt;a href="https://mde.tw/wcm2024/downloads/wsgi_v2_py.txt"&gt;wsgi_v2.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以取得以下結果:&lt;/p&gt;
+&lt;h1&gt;完成品&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://ren911308.github.io/wcm2024/content/w13"&gt;完成品&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Brython程式環境&lt;/h1&gt;
+&lt;p&gt;頁面 demo 在同一頁面下入多個線上 Ace 編輯器與執行按鈕 (practice_html.txt 動態頁面超文件).&lt;/p&gt;
+&lt;p&gt;practice_html.txt 動態頁面超文件應該可以在啟動 Brython 時, 設定將 .py 檔案放入 downloads/py 目錄中引用.&lt;/p&gt;
+&lt;p&gt;亦即將所有對應的 html 也使用 Brython 產生, 然後寫為&lt;a href="https://docs.python.org/3/tutorial/classes.html"&gt;class&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;後, 在範例導入時透過 &lt;a href="https://docs.python.org/3/tutorial/classes.html#instance-objects"&gt;instance&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;引用&lt;/p&gt;
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+
+window.onload=function(){
+
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+
+&lt;/script&gt;
+
+&lt;p&gt;從 1 累加到 100:
+將 iterable 與 iterator 相關說明, 利用 Brython 與 Ace Editor 整理在這個頁面.&lt;/p&gt;</content><category term="w11"></category><category term="網誌編寫"></category></entry></feed>
