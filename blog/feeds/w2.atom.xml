@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w2</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/w2.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T07:09:39+08:00</updated><entry><title>2024 W2 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w2-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T02:45:00+08:00</published><updated>2024-06-14T07:09:39+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w2-blog-tutorial.html</id><summary type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;2024 Spring 網際內容管理與協同產品設計實習課程教學導引.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w2</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/w2.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T11:53:34+08:00</updated><entry><title>2024 W2 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w2-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T02:45:00+08:00</published><updated>2024-06-14T11:53:34+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w2-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第二週課程, 主要確認各學員是否完成 Github 中個人倉儲與網站的建立, 並且除了 Replit 還導入利用 Github Codespaces 維護個人與分組網站.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;四技 WCM 第二週課程, 主要確認各學員是否完成 Github 中個人倉儲與網站的建立, 並且除了 Replit 還導入利用 Github Codespaces 維護個人與分組網站.&lt;/p&gt;
 
 
 &lt;h1&gt;確認所有學員都已經建立個人網站&lt;/h1&gt;
@@ -10,9 +10,17 @@
 利用 "Use this template" 下方的 "Create a new repository" 建立名稱為 wcm2024 的倉儲
 在 wcm2024 倉儲上方的 Settings 設定頁面中, 左方 Pages 中的 Branch 分支區域, 選擇將 main 分支存為網頁的 root 根目錄
 等 wcm2024 的倉儲 Github Pages 轉檔完成後, 可以看到 commits 提交區的綠色勾勾, 就完成網址為 https://帳號.github.io/wcm2024 的個人課程網站
-利用上述步驟完成的倉儲內容, 同時帶有以 Python 編寫的動態網站程式, 以及位於 content 目錄中的靜態網頁資料.&lt;/p&gt;
-&lt;p&gt;說明如何利用 Github 建立個人課程網頁&lt;/p&gt;
-&lt;p&gt;確認學員已經會利用 Replit 維護網站
-建議學員以 email 作為登入 Replit 的帳號, 不要依附在 Github 或 Gmail 帳號下, 以保有使用的獨立性.&lt;/p&gt;
-&lt;p&gt;由於 wcm2024 課程學員使用 Replit 免費帳號, 因此雲端 IDE 僅允許使用 Port 80 與 443 啟動網頁, 因此若要在 Replit 檢視動態網站或網誌推送到 Github 之前的內容, 必須要在動態與靜態模式中擇一使用.&lt;/p&gt;
-&lt;p&gt;說明如何利用 Replit 修改個人網站標題&lt;/p&gt;</content><category term="w2"></category><category term="網誌編寫"></category></entry></feed>
+利用上述步驟完成的倉儲內容, 同時帶有以 Python 編寫的動態網站程式, 以及位於 content 目錄中的靜態網頁資料.
+完成品: &lt;a href="https://ren911308.github.io/wcm2024/content"&gt;https://ren911308.github.io/wcm2024/content&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;確認學員已經會利用 Replit 維護網站&lt;/h1&gt;
+&lt;p&gt;利用 init_replit 指令安裝所需 Python 模組&lt;/p&gt;
+&lt;p&gt;chmod u+x init_replit&lt;/p&gt;
+&lt;p&gt;./init_replit&lt;/p&gt;
+&lt;p&gt;On Replit
+啟動動態編輯網站&lt;/p&gt;
+&lt;h1&gt;如何利用 Codespaces 維護網站&lt;/h1&gt;
+&lt;p&gt;利用 init_replit 指令安裝所需 Python 模組&lt;/p&gt;
+&lt;p&gt;chmod u+x init_replit&lt;/p&gt;
+&lt;p&gt;./init_replit&lt;/p&gt;
+&lt;p&gt;On Replit:&lt;/p&gt;
+&lt;p&gt;之後還需以python3 main.py執行啟動動態編輯網站&lt;/p&gt;</content><category term="w2"></category><category term="網誌編寫"></category></entry></feed>
