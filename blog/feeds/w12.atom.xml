@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w12</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/w12.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T14:51:15+08:00</updated><entry><title>2024 W12 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w12.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T11:45:00+08:00</published><updated>2024-06-14T14:51:15+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w12.-blog-tutorial.html</id><summary type="html">&lt;p&gt;網際內容管理第十二週課程,從單機猜數字遊戲與 AI 應用談起&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;網際內容管理第十二週課程,從單機猜數字遊戲與 AI 應用談起&lt;/p&gt;
+
+
+&lt;h1&gt;先看看 Linux&lt;/h1&gt;
+&lt;p&gt;在 Linux 設定全域 Proxy 伺服器的位置, 可以是 /etc/environment 檔案中的:&lt;/p&gt;
+&lt;p&gt;http_proxy="http://your_proxy_server:port" https_proxy="http://your_proxy_server:port"&lt;/p&gt;
+&lt;h1&gt;猜猜看遊戲&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://mde.tw/wcm2024/downloads/guess_game.7z"&gt;guess_game.7z&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;是在 AI 輔助下, 將簡單的單人 Brython &lt;a href="https://mde.tw/wcm2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/aaced903b90465ed1718edb68e3d10a6/raw/cfce17938843e1f9a9be75d0cf2c2dee7c702291/guess_game.py"&gt;線上猜數字遊戲&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;轉化為可以多人同場比賽猜數字的線上遊戲.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://229.cycu.org:88/"&gt;http://229.cycu.org:88&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由於使用 Flask，直接啟動模式僅用於程式開發，若要部署在 Windows 或 Linux 電腦，還需進行下列考量:&lt;/p&gt;
+&lt;p&gt;1.有沒有比較好的啟動模式?&lt;/p&gt;
+&lt;p&gt;2.要如何使用 https? 有沒有必要?&lt;/p&gt;
+&lt;p&gt;3.能不能透過電腦的服務執行猜數字遊戲?也就是隨著電腦開機後能直接自動執行?&lt;/p&gt;
+&lt;p&gt;4.假如要配置使用者註冊制或儲存比賽資料，該使用哪一種資料庫? SQLite 就可以，需要使用 PostgreSQL&lt;/p&gt;
+&lt;p&gt;5.一但部署成功，該如何設置網站的符號名稱&lt;/p&gt;
+&lt;p&gt;最後，延伸以上的多人網際程式架構，是不是可以開發一個網際協同產品開發網站?&lt;/p&gt;
+&lt;p&gt;在現今 AI 系統的輔助下，變得比較簡單&lt;/p&gt;
+&lt;p&gt;後續猜數字遊戲的開發倉儲: &lt;a href="https://github.com/mdecycu/guess_game"&gt;https://github.com/mdecycu/guess_game&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;值得加入的功能:&lt;/p&gt;
+&lt;p&gt;1.具有管理者模式, 可以重新啟動伺服器.&lt;/p&gt;
+&lt;p&gt;2.可讓參賽者經由 Github、Gmail 或其他支援 Oauth2 登入協定的帳號登入.&lt;/p&gt;
+&lt;p&gt;3.加入資料庫, 儲存參賽者的得分資料、歷史紀錄並提供排行榜等功能.&lt;/p&gt;
+&lt;p&gt;4.加入其他可多人線上參與競技或進行同步對話功能, 或納入其他專業相關的協同設計功能.&lt;/p&gt;</content><category term="w12"></category><category term="網誌編寫"></category></entry></feed>
