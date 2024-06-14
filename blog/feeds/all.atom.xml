@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/all.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T13:13:51+08:00</updated><entry><title>2024 W6 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T06:45:00+08:00</published><updated>2024-06-14T13:13:51+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/all.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T13:29:43+08:00</updated><entry><title>2024 W8 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w8.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T07:45:00+08:00</published><updated>2024-06-14T13:29:43+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w8.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第八週課程, 從教育的本質看網際內容管理課程的內容要點.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;四技 WCM 第八週課程, 從教育的本質看網際內容管理課程的內容要點.&lt;/p&gt;
+
+
+&lt;h1&gt;wcm2024 1a w8 從教育的本質看課程內容&lt;/h1&gt;
+&lt;p&gt;介紹教育本質&lt;a href="https://www.youtube.com/watch?v=3XDoYSvsvOA"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;wcm2024 1a w8 說明如何將影片嵌入網頁&lt;/h1&gt;
+&lt;p&gt;將自己想上傳的影片內容先放到yt上，之後至自己的yt影片下，點擊分享，選擇第一個嵌入，將顯示在右側的超連結程式碼複製，來到動態編輯網站，點擊Source code(最下排笑臉右邊)，將複製的超連結內容貼上
+完成&lt;a href="https://www.youtube.com/watch?v=3XDoYSvsvOA"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;期中成績登記，並輸入自己想要的理想分數&lt;/h1&gt;</content><category term="w8"></category><category term="網誌編寫"></category></entry><entry><title>2024 W6 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T06:45:00+08:00</published><updated>2024-06-14T13:17:18+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
 
 
 &lt;h1&gt;Git的發展歷史&lt;/h1&gt;
-&lt;p&gt;1.誕生背景： Git 是由 Linux 之父 Linus Torvalds 在 2005 年為了管理 Linux 內核開發而創建的。在那之前，Linux 內核團隊使用的是 BitKeeper，但由於許可議題，使得 Linux 社區需要一個新的版本控制系統。&lt;/p&gt;
+&lt;p&gt;1.誕生背景： Git 是由 Linux 之父 Linus Torvalds 在 2005 年為了管理 Linux 內核開發而創建的。在那之前，Linux 內核團隊使用的是 BitKeeper，但由於許可議題，使得 Linux 社區需要一個新的版本控制系統&lt;/p&gt;
 &lt;p&gt;2.誕生過程： Linus Torvalds開始尋找替代方案。他首先嘗試了 Monotone 和 Mercurial 等其他工具，但最終決定開發一個新的版本控制系統，這就是 Git&lt;/p&gt;
 &lt;p&gt;3.首次發布： Git 的第一個版本於 2005 年 4 月釋出，並在Linux內核的開發中使用。從那時起，Git 迅速流行，成為許多開源項目和企業使用的首選版本控制系統之一&lt;/p&gt;
 &lt;p&gt;4.社區發展： Git 很快吸引了一個活躍的社區，許多開發者貢獻了各種功能和改進。這些貢獻使得 Git 可以不斷演進和增強。&lt;/p&gt;
