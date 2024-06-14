@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w6</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/w6.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T13:08:00+08:00</updated><entry><title>2024 W6 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T06:45:00+08:00</published><updated>2024-06-14T13:08:00+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w6</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/w6.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T13:12:09+08:00</updated><entry><title>2024 W6 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T06:45:00+08:00</published><updated>2024-06-14T13:12:09+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
 
 
@@ -48,20 +48,24 @@ Torvalds 以其開放、直率和自由的風格而聞名，他在維護 Linux �
 &lt;p&gt;總的來說，Git 提供了一個強大的框架，使得相同專業的人士可以更好地協作、管理內容，並有效地解決問題。通過學習和掌握 Git 的基本原理和操作技巧，可以使得團隊更加高效地進行工作。&lt;/p&gt;
 &lt;h1&gt;在 Windows 實際 demo git client 與 git server該如何進行&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;安裝 Git
-首先，需要在你的 Windows 上安裝 Git 客戶端。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;前往 Git 官方網站下載安裝包，然後按照提示安裝。
-安裝完成後，可以通過命令行輸入 git --version 來確認 Git 是否安裝成功。
-2. 配置 Git
-安裝完成後，進行一些基本的配置：&lt;/p&gt;
-&lt;p&gt;bash
+&lt;li&gt;
+&lt;p&gt;安裝 Git
+首先，需要在你的 Windows 上安裝 Git 客戶端。
+前往 Git 官方網站下載安裝包，然後按照提示安裝。
+安裝完成後，可以通過命令行輸入 git --version 來確認 Git 是否安裝成功。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置 Git
+安裝完成後，進行一些基本的配置：
+bash
 複製程式碼
 git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-3. 安裝 Git Server
-在 Windows 上設置一個 Git server，推薦使用 Git for Windows 與 SSH server（例如 OpenSSH）。&lt;/p&gt;
-&lt;p&gt;安裝 OpenSSH Server
+git config --global user.email "your.email@example.com"&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安裝 Git Server
+在 Windows 上設置一個 Git server，推薦使用 Git for Windows 與 SSH server（例如 OpenSSH）。
+安裝 OpenSSH Server
 打開“設置” -&amp;gt; “應用” -&amp;gt; “可選功能”。
 點擊“添加功能”，找到“OpenSSH Server”，然後安裝。
 啟動 OpenSSH Server
@@ -72,30 +76,34 @@ powershell
 Start-Service sshd
 Set-Service -Name sshd -StartupType 'Automatic'
 生成 SSH 密鑰
-如果你還沒有 SSH 密鑰，可以通過以下命令生成：&lt;/p&gt;
-&lt;p&gt;bash
+如果你還沒有 SSH 密鑰，可以通過以下命令生成：
+bash
 複製程式碼
 ssh-keygen -t rsa -b 4096 -C "your.email@example.com"
 將生成的公鑰添加到 Git server 的 ~/.ssh/authorized_keys 文件中。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;創建一個裸倉庫
-裸倉庫是一個專門用於作為遠程倉庫的 Git 倉庫。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;bash
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;創建一個裸倉庫
+裸倉庫是一個專門用於作為遠程倉庫的 Git 倉庫。
+bash
 複製程式碼
 mkdir C:\git-server\myrepo.git
 cd C:\git-server\myrepo.git
-git init --bare
-5. 設置 SSH 登錄信息
+git init --bare&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;設置 SSH 登錄信息
 將公鑰拷貝到 Git server 用戶的 ~/.ssh/authorized_keys 中，這樣就可以通過 SSH 訪問該用戶的 Git 倉庫。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;克隆遠程倉庫（Client）
-在客戶端，通過 SSH 克隆剛才創建的遠程倉庫：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;bash
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;克隆遠程倉庫（Client）
+在客戶端，通過 SSH 克隆剛才創建的遠程倉庫：
+bash
 複製程式碼
-git clone ssh://username@hostname/C:/git-server/myrepo.git
-7. 操作示範
+git clone ssh://username@hostname/C:/git-server/myrepo.git&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;操作示範
 在本地創建新文件並提交
 bash
 複製程式碼
@@ -107,7 +115,11 @@ git push origin master
 在本地拉取更新
 bash
 複製程式碼
-git pull origin master
-8. 顯示結果
-在本地文件夾中，你應該可以看到 README.md 文件的存在，並且通過 git log 可以查看提交歷史。&lt;/p&gt;
-&lt;p&gt;以上步驟展示了如何在 Windows 上設置一個基本的 Git server 和 Git client，並進行簡單的操作。如果有任何問題或需要進一步的幫助，請隨時告訴我！&lt;/p&gt;</content><category term="w6"></category><category term="網誌編寫"></category></entry></feed>
+git pull origin master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;顯示結果
+在本地文件夾中，你應該可以看到 README.md 文件的存在，並且通過 git log 可以查看提交歷史。
+以上步驟展示了如何在 Windows 上設置一個基本的 Git server 和 Git client，並進行簡單的操作。如果有任何問題或需要進一步的幫助，請隨時告訴我！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="w6"></category><category term="網誌編寫"></category></entry></feed>
