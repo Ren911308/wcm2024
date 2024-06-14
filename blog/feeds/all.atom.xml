@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/all.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T12:17:39+08:00</updated><entry><title>2024 W3 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w3-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T03:45:00+08:00</published><updated>2024-06-14T12:17:39+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w3-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第三週課程, 除了 Replit, Github Codespaces, Gitpod 之外, 還介紹如何利用可攜系統維護個人與分組網站.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/all.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T12:28:31+08:00</updated><entry><title>2024 W4 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w4-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T04:45:00+08:00</published><updated>2024-06-14T12:28:31+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w4-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第四週課程, 複習前三週的課程內容, 並且介紹 git 與 cmsimde 的相關用法.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;四技 WCM 第四週課程, 複習前三週的課程內容, 並且介紹 git 與 cmsimde 的相關用法.&lt;/p&gt;
+
+
+&lt;h1&gt;Replit 靜態網站檢視&lt;/h1&gt;
+&lt;p&gt;下載 &lt;a href="https://mde.tw/wcm2024/downloads/main2.txt"&gt;main2.txt&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;與 &lt;a href="https://mde.tw/wcm2024/downloads/static.txt"&gt;static.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中包含 main2.py 與 static.py, 只要在 Shell 執行 python3 main2.py 就可以執行倉儲內的靜態網站檢視.&lt;/p&gt;</content><category term="w4"></category><category term="網誌編寫"></category></entry><entry><title>2024 W3 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w3-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T03:45:00+08:00</published><updated>2024-06-14T12:17:39+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w3-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第三週課程, 除了 Replit, Github Codespaces, Gitpod 之外, 還介紹如何利用可攜系統維護個人與分組網站.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;四技 WCM 第三週課程, 除了 Replit, Github Codespaces, Gitpod 之外, 還介紹如何利用可攜系統維護個人與分組網站.&lt;/p&gt;
 
 
