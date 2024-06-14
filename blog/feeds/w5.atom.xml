@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w5</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/w5.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T12:37:19+08:00</updated><entry><title>2024 W5 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w5-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T05:45:00+08:00</published><updated>2024-06-14T12:37:19+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w5-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第五週課程, 以 iframe 嵌入先前的教學影片, 並摘要各影片內容.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;四技 WCM 第五週課程, 以 iframe 嵌入先前的教學影片, 並摘要各影片內容.&lt;/p&gt;
+
+&lt;p&gt;# 講解Replit分組平台倉儲設定
+詳細影片&lt;a href="https://www.youtube.com/watch?v=ep6lDKCU_wo"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主要內容有用.ssh-keygen創建自己的config和id_rsa，刪除重新綁定在replit的倉儲帳號以利重新獲得自己的權限&lt;/p&gt;
+&lt;h1&gt;使用可攜檔裡的Putty-solvespace.exe(STL)，零件檢視方法&lt;/h1&gt;
+&lt;p&gt;詳細影片&lt;a href="https://www.youtube.com/watch?v=ep6lDKCU_wo"&gt;影片&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;如何使用可攜程式近端，維護更新自己及分組倉儲&lt;/h1&gt;
+&lt;p&gt;詳細影片&lt;a href="https://www.youtube.com/watch?v=ep6lDKCU_wo"&gt;影片&lt;/a&gt;&lt;/p&gt;</content><category term="w5"></category><category term="網誌編寫"></category></entry></feed>
