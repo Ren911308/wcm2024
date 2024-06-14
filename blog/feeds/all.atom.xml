@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/all.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T13:29:43+08:00</updated><entry><title>2024 W8 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w8.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T07:45:00+08:00</published><updated>2024-06-14T13:29:43+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w8.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第八週課程, 從教育的本質看網際內容管理課程的內容要點.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統</title><link href="https://github.io/41223126/wcm2044/blog/" rel="alternate"></link><link href="https://github.io/41223126/wcm2044/blog/feeds/all.atom.xml" rel="self"></link><id>https://github.io/41223126/wcm2044/blog/</id><updated>2024-06-14T13:31:25+08:00</updated><entry><title>2024 W8 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w8.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T07:45:00+08:00</published><updated>2024-06-14T13:31:25+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w8.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第八週課程, 從教育的本質看網際內容管理課程的內容要點.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;四技 WCM 第八週課程, 從教育的本質看網際內容管理課程的內容要點.&lt;/p&gt;
 
 
@@ -8,7 +8,8 @@
 &lt;h1&gt;wcm2024 1a w8 說明如何將影片嵌入網頁&lt;/h1&gt;
 &lt;p&gt;將自己想上傳的影片內容先放到yt上，之後至自己的yt影片下，點擊分享，選擇第一個嵌入，將顯示在右側的超連結程式碼複製，來到動態編輯網站，點擊Source code(最下排笑臉右邊)，將複製的超連結內容貼上
 完成&lt;a href="https://www.youtube.com/watch?v=3XDoYSvsvOA"&gt;影片&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;期中成績登記，並輸入自己想要的理想分數&lt;/h1&gt;</content><category term="w8"></category><category term="網誌編寫"></category></entry><entry><title>2024 W6 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T06:45:00+08:00</published><updated>2024-06-14T13:17:18+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
+&lt;h1&gt;期中成績登記，並輸入自己想要的理想分數&lt;/h1&gt;
+&lt;p&gt;60&lt;/p&gt;</content><category term="w8"></category><category term="網誌編寫"></category></entry><entry><title>2024 W6 課程</title><link href="https://github.io/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T06:45:00+08:00</published><updated>2024-06-14T13:17:18+08:00</updated><author><name>kmol</name></author><id>tag:github.io,2024-06-14:/41223126/wcm2044/blog/2024-Spring-w6.-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;四技 WCM 第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
 
 
